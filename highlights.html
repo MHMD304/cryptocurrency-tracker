@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/65868e1bfaeb70f1b8ae1dd22d4e7199.png">
+    <title>CurrencEase :: Highlights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+.bigdiv{
+    background-color: white;
+    width:100%;
+    max-width: 1300px;
+    min-width: 1200px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.subdiv{
+    background-color: #fff;
+    width: 350px;
+    height: 610px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,2);
+    margin-left: 50px;
+    border: 1px solid black;
+
+}
+.coinleft{
+    color: black;
+    list-style: none;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 9px;
+
+}
+.coinright{
+    color: black;
+    list-style: none;
+    float: right;
+    padding-left: 135px;
+    padding-bottom: 10px;
+}
+.hilogo{
+    width: 20px;
+    height: auto;
+    position: relative;
+    top: 5px;
+    border-radius: 100%;
+}
+
+caption{
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.coinleft1{
+    color: black;
+    list-style: none;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+}
+
+.coinright1{
+    color: black;
+    list-style: none;
+    float: right;
+    padding-left: 105px;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .main1 .bigdiv{
+    background-color:#333;
+    }
+body.dark-mode .main1 .subdiv{
+    background-color: #333;
+    box-shadow: 0px 0px 10px rgba(360,360,360,2);
+    border-color: white;
+}
+body.dark-mode .main1 .subdiv .coinleft{
+    color: white;
+}
+body.dark-mode .main1 .subdiv .coinright{
+    color: white;
+}
+body.dark-mode .main1 .subdiv .coinleft1{
+    color: white;
+}
+body.dark-mode .main1 .subdiv .coinright1{
+    color: white;
+}
+body.dark-mode .main1 caption{
+    color: white;
+}
+
+ 
+    </style>
+</head>
+
+<body >
+    <div id="preloader"></div>
+    <div id="Cryptocurrencies-page" class="hidden" onmouseleave="handleMouseLeave('Cryptocurrencies-page', this, 'default')">
+        <ul class="Cryptocurrencies-page-list">
+            <li><a href="index.html"><ion-icon name="analytics-sharp"></ion-icon> Ranking </a></li>
+            <li><a href="recentlyadded.html"><ion-icon name="add-circle-sharp"></ion-icon> Recently Added</a></li>
+            <li><a href="highlights.html"><ion-icon name="list-sharp"></ion-icon> Highlights</a></li>
+        </ul>
+    
+        <div class="sub-page-content">
+            <h2>Cryptocurrency Rankings</h2>
+            <p>Welcome to the Cryptocurrency Rankings page. Explore the latest rankings and trends in the world of cryptocurrencies.</p>
+        </div>
+    </div>
+    
+    <div id="products-page" class="hidden" onmouseleave="handleMouseLeave('products-page', this, 'default')">
+        <ul class="products-page-list">
+            <li><a href="converter.html"><ion-icon id="conv" name="swap-horizontal-sharp"></ion-icon> Converter</a></li>
+        </ul>
+    
+        <div class="sub-page-content">
+            <h2>Product Converter</h2>
+            <p>Discover our product converter tool, allowing you to easily convert between different product units. Try it now!</p>
+        </div>
+    </div>
+
+    <nav>
+    <ul class="navlist">
+        <li><a class="nav2" href="#cryptocurrencies" onmouseenter="handleMouseEnter('Cryptocurrencies-page', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">Cryptocurrencies</a></li>
+        <li><a class="nav2" href="about.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">About</a></li>
+        <li><a class="nav2" href="#products" onmouseenter="handleMouseEnter('products-page', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">Products</a></li>
+        <li><a class="nav2" href="history.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">History</a></li>
+        <li><a class="nav2" href="news.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">News</a></li>
+        <li><form name="search" method="get" class="search-bar" action="https://www.google.com/search">
+            <input type="text" placeholder="Search anything" name="search">
+            <button type="submit"><ion-icon name="search-sharp"></ion-icon></button>
+        </form></li>
+    </ul>
+    </nav>
+   
+
+    <main class="main1">
+        <br>
+        <div class="bigdiv">
+
+            <div class="subdiv">
+                <table>
+                    <caption>Trending Crypto</caption>
+                <tr>
+                    <th class="coinleft1">Coin</th>
+                    <th class="coinright1">Price</th>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/feg.webp">&nbsp;FEG BSC</td>
+                    <td class="coinright1">$0.00035819</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/Icon_TET.webp">&nbsp;Tectum</td>
+                    <td class="coinright1">$21.63</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/Sei_Logo_-_Transparent.webp">&nbsp;Sei</td>
+                    <td class="coinright1">$0.551357</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/GUAC_Official_Logo.webp">&nbsp;Guacamole</td>
+                    <td class="coinright1">$0.000000298</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/logo_transparent_notext.webp">&nbsp;Chihuahua Chain</td>
+                    <td class="coinright1">0.00025779</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/kaspa-icon-exchanges.webp">&nbsp;Kaspa</td>
+                    <td class="coinright1">$0.120902</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/feg (1).webp">&nbsp;FEG ETH</td>
+                    <td class="coinright1">$0.000363</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/solana.webp">&nbsp;Solana</td>
+                    <td class="coinright1">$108.64</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/PRISMA_200.webp">&nbsp;Prisma</td>
+                    <td class="coinright1">$1.68</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/Secondary_Symbol.webp">&nbsp;Injective</td>
+                    <td class="coinright1">$37.33</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/pancakeswap-cake-logo_(1).webp">&nbsp;Pancakeswap</td>
+                    <td class="coinright1">$3.70</td>
+                </tr><tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/Coin_CoqInu_1200px.webp">&nbsp;Coq Inu</td>
+                    <td class="coinright1">$0.00000159</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/Metis_Black_Bg.webp">&nbsp;Metis</td>
+                    <td class="coinright1">$82.23</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/sui_asset.webp">&nbsp;Sui</td>
+                    <td class="coinright1">$0.838216</td>
+                </tr>
+
+                <tr>
+                    <td class="coinleft1"><img class="hilogo" src="images/bonk.webp">&nbsp;Bonk</td>
+                    <td class="coinright1">$0.00001664</td>
+                </tr>
+
+
+                </table>
+            </div>
+
+                <div class="subdiv">
+                    <table>
+                        <caption>Most Voted Coins</caption>
+                    <tr>
+                        <th class="coinleft">Coin</th>
+                        <th class="coinright">Price</th>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/dogecoin (1).webp">&nbsp;Degocoin</td>
+                        <td class="coinright">$0.092869<td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/ordi.webp">&nbsp;ORDI</td>
+                        <td class="coinright">$77.18</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/BSV.webp">&nbsp;Bitcoin SV</td>
+                        <td class="coinright">$102.87</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/download.webp">&nbsp;Algorand</td>
+                        <td class="coinright">$0.241753</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/cosmos_hub.webp">&nbsp;Cosmos Hub</td>
+                        <td class="coinright">$11.50</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/filecoin.webp">&nbsp;Filecoin</td>
+                        <td class="coinright">$6.10</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/Internet_Computer_logo.webp">&nbsp;Internet Computer</td>
+                        <td class="coinright">$9.50</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/solana.webp">&nbsp;Solana</td>
+                        <td class="coinright">$108.64</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/Sei_Logo_-_Transparent (1).webp">&nbsp;Sei</td>
+                        <td class="coinright">$0.555547</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/SKALE_token_300x300.webp">&nbsp;SKALE</td>
+                        <td class="coinright">$0.076552</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/chain-logo.webp">&nbsp;Beam</td>
+                        <td class="coinright">$0.01869032</td>
+                    </tr><tr>
+                        <td class="coinleft"><img class="hilogo" src="images/9285.webp">&nbsp;Moonriver</td>
+                        <td class="coinright">$30.94</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/cro_token_logo.webp">&nbsp;Cronos</td>
+                        <td class="coinright">$0.10123</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/VET_Token_Icon.webp">&nbsp;VeChain</td>
+                        <td class="coinright">$0.0363266</td>
+                    </tr>
+    
+                    <tr>
+                        <td class="coinleft"><img class="hilogo" src="images/Graph_Token.webp">&nbsp;The Graph</td>
+                        <td class="coinright">$0.189552</td>
+                    </tr>
+    
+    
+                    </table>
+                </div>
+
+                    <div class="subdiv">
+                        <table>
+                            <caption>Upcoming Cryptocurrencies</caption>
+                        <tr>
+                            <th class="coinleft">Coin</th>
+                            <th class="coinright">Added to Watchlist</th>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/Captura_de_ecrÃ£_2023-12-26_182935.webp">&nbsp;BURRRD</td>
+                            <td class="coinright">52,500</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/PORY_COIN.webp">&nbsp;Porygon</td>
+                            <td class="coinright">47,508</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/photo_2023-12-26_19.webp">&nbsp;DragonCoin</td>
+                            <td class="coinright">42,889</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/IMG_3766.webp">&nbsp;MARS(Doginal)</td>
+                            <td class="coinright">36,208</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/ZRPY_Logo_CMC_CoinGecko_LiveCoinWatch.webp">&nbsp;Zerpaay</td>
+                            <td class="coinright">16,507</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/kaspa-icon-exchanges.webp">&nbsp;Kaspa</td>
+                            <td class="coinright">11,490</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/orcainu_logo.webp">&nbsp;ORCA INU</td>
+                            <td class="coinright">11,367</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/779e5404024bcd3cec3db54370ea66c.webp">&nbsp;Bitcoin Cats</td>
+                            <td class="coinright">10,604</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/WhatsApp_Image_2023-12-25_at_00.webp">&nbsp;Virtual Protocol</td>
+                            <td class="coinright">6,701</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/ICE-logo-01.webp">&nbsp;ICE NET</td>
+                            <td class="coinright">6,458</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/spdr.webp">&nbsp;SpiderSwap</td>
+                            <td class="coinright">6,365</td>
+                        </tr><tr>
+                            <td class="coinleft"><img class="hilogo" src="images/Year_of_the_Dragon.webp">&nbsp;Year of Dragon</td>
+                            <td class="coinright">6,257</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/missing_standard-de303d622235a7cd2ddba6e0c5fbcb9be08abc09e609e171ff207cfad9aeae6f.webp">&nbsp;Radpie</td>
+                            <td class="coinright">5,797</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/logo.webp">&nbsp;TraderX</td>
+                            <td class="coinright">5,474</td>
+                        </tr>
+        
+                        <tr>
+                            <td class="coinleft"><img class="hilogo" src="images/0x93999d3fcab15cc052cf96b739580fc11e015944_(1).webp">&nbsp;NoGas</td>
+                            <td class="coinright">5,286</td>
+                        </tr>
+        
+        
+                        </table>
+                    </div>
+
+            </div>
+
+
+            
+
+    </main>
+    <br><br><br><br>
+
+
+    <footer>
+    <div  class="footer">
+        <div class="footer-content">
+            <p class="rights">&copy; 2023 CurrencEase. All Rights Reserved.</p>
+            <div class="social">
+                <ul>
+                    <li><a class="youtube" href="https://www.youtube.com/watch?v=eIqre0Wsbro&list=PLRCvSNiMyEmyBsu6nGxB5LtMdAltgNDX5&index=2"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                    <li><a class="whatsapp" href="https://ionic.io/ionicons"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                    <li><a class="twitter" href="https://twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a class="facebook" href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a class="instagram" href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a class="tiktok" href="https://www.tiktok.com"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<ion-icon name="moon-sharp" id="moon"></ion-icon>
+    
+    <script>
+const toggle = document.getElementById("moon");
+const body = document.querySelector('body');
+
+function toggleDarkMode() {
+    body.classList.toggle("dark-mode");
+
+    // current icon??
+    const currentIcon = toggle.getAttribute('name');
+
+    const newIcon = currentIcon === 'moon-sharp' ? 'sunny-sharp' : 'moon-sharp';
+
+    // new icon 
+    toggle.setAttribute('name', newIcon);
+
+    
+    const isDarkModeEnabled = body.classList.contains('dark-mode');
+    localStorage.setItem('darkModeEnabled', isDarkModeEnabled);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const isDarkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+    if (isDarkModeEnabled) {
+        body.classList.add('dark-mode');
+        toggle.setAttribute('name', 'sunny-sharp');
+    }
+});
+
+
+toggle.addEventListener('click', toggleDarkMode);
+
+        
+        
+        // Change the color of the navigation bar
+        function changeColor(element, color) {
+            element.style.color = color;
+
+            if (color === 'default') {
+                element.style.color = '';
+            }
+        }
+
+        function showPage(pageId) {
+            const page = document.getElementById(pageId);
+            if (page) {
+                page.style.display = 'block';
+            }
+        }
+
+        function hidePage(pageId) {
+            const page = document.getElementById(pageId);
+            if (page) {
+                page.style.display = 'none';
+            }
+        }
+
+        function handleMouseEnter(pageId, element, color) {
+            changeColor(element, color);
+            showPage(pageId);
+        }
+
+        function handleMouseLeave(pageId, element, color) {
+            changeColor(element, color);
+            hidePage(pageId);
+        }
+        var loader=document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display="none";
+        })
+    </script>
+    </body>
+</html>
+          

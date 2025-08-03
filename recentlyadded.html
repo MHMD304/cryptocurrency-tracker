@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/65868e1bfaeb70f1b8ae1dd22d4e7199.png">
+    <title>CurrencEase :: Recently Added</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .d70{
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top:1px solid #ddd;
+
+}
+
+body.dark-mode .d70 .crypto{
+    color: black;
+}
+
+.d5{
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top:1px solid #ddd;
+    text-align: center;
+}
+
+.trumpimg{
+    width: 20px;
+    height: auto;
+    position: relative;
+    top: 5px;
+    border-radius: 100%;
+}
+
+.ethimg{
+    width: 15px;
+    height: auto;
+    position: relative;
+    top: 4px;
+    border-radius: 100%;
+}
+    </style>
+</head>
+
+<body >
+    <div id="preloader"></div>
+    <div id="Cryptocurrencies-page" class="hidden" onmouseleave="handleMouseLeave('Cryptocurrencies-page', this, 'default')">
+        <ul class="Cryptocurrencies-page-list">
+            <li><a href="index.html"><ion-icon name="analytics-sharp"></ion-icon> Ranking </a></li>
+            <li><a href="recentlyadded.html"><ion-icon name="add-circle-sharp"></ion-icon> Recently Added</a></li>
+            <li><a href="highlights.html"><ion-icon name="list-sharp"></ion-icon> Highlights</a></li>
+
+        </ul>
+    
+        <div class="sub-page-content">
+            <h2>Cryptocurrency Rankings</h2>
+            <p>Welcome to the Cryptocurrency Rankings page. Explore the latest rankings and trends in the world of cryptocurrencies.</p>
+        </div>
+    </div>
+    
+    <div id="products-page" class="hidden" onmouseleave="handleMouseLeave('products-page', this, 'default')">
+        <ul class="products-page-list">
+            <li><a href="converter.html"><ion-icon id="conv" name="swap-horizontal-sharp"></ion-icon> Converter</a></li>
+        </ul>
+    
+        <div class="sub-page-content">
+            <h2>Product Converter</h2>
+            <p>Discover our product converter tool, allowing you to easily convert between different product units. Try it now!</p>
+        </div>
+    </div>
+
+    <nav>
+    <ul class="navlist">
+        <li><a class="nav2" href="index.html" onmouseenter="handleMouseEnter('Cryptocurrencies-page', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">Cryptocurrencies</a></li>
+        <li><a class="nav2" href="about.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">About</a></li>
+        <li><a class="nav2" href="#products" onmouseenter="handleMouseEnter('products-page', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">Products</a></li>
+        <li><a class="nav2" href="history.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">History</a></li>
+        <li><a class="nav2" href="news.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">News</a></li>
+        <li><form name="search" method="get" class="search-bar" action="https://www.google.com/search">
+            <input type="text" placeholder="Search anything" name="search">
+            <button type="submit"><ion-icon name="search-sharp"></ion-icon></button>
+        </form></li>
+    </ul>
+    </nav>
+
+
+          
+
+    <!-- Function for dark mode theme to light mode and vice versa -->
+    
+    <ion-icon name="moon-sharp" id="moon"></ion-icon>
+    
+
+    <script>
+        const toggle = document.getElementById("moon");
+const body = document.querySelector('body');
+
+function toggleDarkMode() {
+    body.classList.toggle("dark-mode");
+
+    
+    const currentIcon = toggle.getAttribute('name');
+
+
+    const newIcon = currentIcon === 'moon-sharp' ? 'sunny-sharp' : 'moon-sharp';
+
+    
+    toggle.setAttribute('name', newIcon);
+
+    
+    const isDarkModeEnabled = body.classList.contains('dark-mode');
+    localStorage.setItem('darkModeEnabled', isDarkModeEnabled);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const isDarkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+    if (isDarkModeEnabled) {
+        body.classList.add('dark-mode');
+        toggle.setAttribute('name', 'sunny-sharp');
+    }
+});
+
+
+toggle.addEventListener('click', toggleDarkMode);
+
+        
+        // Change the color of the navigation bar
+        function changeColor(element, color) {
+            element.style.color = color;
+
+            if (color === 'default') {
+                element.style.color = '';
+            }
+        }
+
+        function showPage(pageId) {
+            const page = document.getElementById(pageId);
+            if (page) {
+                page.style.display = 'block';
+            }
+        }
+
+        function hidePage(pageId) {
+            const page = document.getElementById(pageId);
+            if (page) {
+                page.style.display = 'none';
+            }
+        }
+
+        function handleMouseEnter(pageId, element, color) {
+            changeColor(element, color);
+            showPage(pageId);
+        }
+
+        function handleMouseLeave(pageId, element, color) {
+            changeColor(element, color);
+            hidePage(pageId);
+        }
+        var loader=document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display="none";
+        })
+    </script>
+    
+    <table class="crypto-table">
+        <tr class="table-row"> 
+            <th class="d0"># <ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon></th>
+            <th class="d1">Name</th>
+            <th class="d2">Price</th>
+            <th class="d3">1h</th>
+            <th class="d4">24h</th>
+            <th class="d5">Fully Diluted Market Cap</th>
+            <th class="d6">Volume</th>
+            <th class="d7">Blockchain</th>
+            <th class="d8">Added</th>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/trump/">1</a></td>
+            <td class="d1"><a  class="crypto" href="https://coinmarketcap.com/currencies/trump/"><img class="trumpimg" src="images/trump.png">&nbsp;TRUMP&nbsp;<p id="TBTC">MAGA</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/trump/">$0.000002534</a></td>
+            <td class="d3"><a  style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/trump/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>7.21%</a></td>
+            <td class="d4"><a  style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/trump/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>13.85%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/trump/">$2,533,540</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/trump/">$48,650</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/trump/"><form><button type="button"><img class="ethimg" src="images/ethereum.png"> Ethereum</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/trump/">23 hours ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/neat/">2</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/neat/"><img class="trumpimg" src="images/neat.png">&nbsp;NEAT&nbsp;<p id="TBTC">NEAT</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/neat/">$0.3436</a></td>
+            <td class="d3"><a  style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/neat/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>5.02%</a></td>
+            <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/neat/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>17.26%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/neat/">$14,431,368</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/neat/">$1,217,857</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/neat/"><form><button type="button"><img class="ethimg" src="images/near.png"> NEAR Protocol</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/neat/">1 day ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/">3</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/"><img class="trumpimg" src="images/CIF.png">&nbsp;CATWIFHAT&nbsp;<p id="TBTC">CIF</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/">$0.001049</a></td>
+            <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>15.01%</a></td>
+            <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>11.68%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/">$1,049,347</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/">$675,692</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/"><form><button type="button"><img class="ethimg" src="images/solana.png"> Solana</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/catwifhat/">1 day ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/">4</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/"><img class="trumpimg" src="images/luck.png">&nbsp;Lucky Cat&nbsp;<p id="TBTC">LUCK</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/">$0.000002743</a></td>
+            <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>3.76%</a></td>
+            <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>17.81%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/">$274,292</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/">$34,307</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/"><form><button type="button"><img class="ethimg" src="images/ethereum.png"> Ethereum</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/lucky-cat/">1 day ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/">5</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/"><img class="trumpimg" src="images/MTC.png">&nbsp;Matrix Chain&nbsp;<p id="TBTC">MTC</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/">$0.06295</a></td>
+            <td class="d3"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>0.04%</a></td>
+            <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>0.17%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/">$223,487,309</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/">$162,185</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/"><form><button type="button"><img class="ethimg" src="images/BNB.png"> BNB</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/matrix-chain/">1 day ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/">6</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/"><img class="trumpimg" src="images/smol.png">&nbsp;Smolcoin&nbsp;<p id="TBTC">SMOL</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/">$0.000009343</a></td>
+            <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>7.52%</a></td>
+            <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>23.62%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/">$9,343,136</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/">$1,323,796</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/"><form><button type="button"><img class="ethimg" src="images/arbitrum.png"> Arbitrum</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/smolcoin/">2 days ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/">7</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/"><img class="trumpimg" src="images/fmc.png">&nbsp;Fame AI&nbsp;<p id="TBTC">$FMC</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/">$0.00108</a></td>
+            <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>0.14%</a></td>
+            <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>11.47%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/">$10,804,033</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/">$77,830</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/"><form><button type="button"><img class="ethimg" src="images/ethereum.png"> Ethereum</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/fame-ai/">2 days ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/ordizk/">8</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/ordizk/"><img class="trumpimg" src="images/ozk.png">&nbsp;OrdiZK&nbsp;<p id="TBTC">OZK</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/ordizk/">$0.003891</a></td>
+            <td class="d3"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/ordizk/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>5.21%</a></td>
+            <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/ordizk/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>1.88%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/ordizk/">$3,891,430</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/ordizk/">$174,839</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/ordizk/"><form><button type="button"><img class="ethimg" src="images/ethereum.png"> Ethereum</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/ordizk/">2 days ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/kimbo/">9</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/kimbo/"><img class="trumpimg" src="images/kimbo.png">&nbsp;Kimbo&nbsp;<p id="TBTC">KIMBO</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/kimbo/">$0.00009664</a></td>
+            <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/kimbo/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>3.21%</a></td>
+            <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/kimbo/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>85.64%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/kimbo/">$6,708,432</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/kimbo/">$7,964,655</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/kimbo/"><form><button type="button"><img class="ethimg" src="images/avalanche.png"> Avalanche</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/kimbo/">2 days ago</a></td>
+        </tr>
+
+        <tr class="table-row">
+            <td class="d0"><a class="crypto" href="https://coinmarketcap.com/currencies/ada/">10</a></td>
+            <td class="d1"><a class="crypto" href="https://coinmarketcap.com/currencies/ada/"><img class="trumpimg" src="images/ada.png">&nbsp;Ada&nbsp;<p id="TBTC">ADA</p></a></td>
+            <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/ada/">$0.0007754</a></td>
+            <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/ada/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>1.94%</a></td>
+            <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/ada/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>37.44%</a></td>
+            <td class="d5"><a class="crypto" href="https://coinmarketcap.com/currencies/ada/">$775,417</a></td>
+            <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/ada/">$714,250</a></td>
+            <td class="d70"><a class="crypto" href="https://coinmarketcap.com/currencies/ada/"><form><button type="button"><img class="ethimg" src="images/solana.png"> Solana</form></a></td>
+            <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/ada/">2 days ago</a></td>
+        </tr>
+
+    </table>
+    <br><br><br><br>
+    <footer>
+        <div style="position: relative;" class="footer">
+            <div class="footer-content">
+                <p class="rights">&copy; 2023 CurrencEase. All Rights Reserved.</p>
+                <div class="social">
+                    <ul>
+                        <li><a class="youtube" href="https://www.youtube.com/watch?v=eIqre0Wsbro&list=PLRCvSNiMyEmyBsu6nGxB5LtMdAltgNDX5&index=2"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li><a class="whatsapp" href="https://ionic.io/ionicons"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                        <li><a class="twitter" href="https://twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a class="facebook" href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a class="tiktok" href="https://www.tiktok.com"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

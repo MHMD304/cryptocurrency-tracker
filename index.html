@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/65868e1bfaeb70f1b8ae1dd22d4e7199.png">
+    <title>CurrencEase :: Rankings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+        
+    </script>
+   
+</head>
+
+<body >
+    <div id="preloader"></div>
+    <div id="Cryptocurrencies-page" class="hidden" onmouseleave="handleMouseLeave('Cryptocurrencies-page', this, 'default')">
+        <ul class="Cryptocurrencies-page-list">
+                         <li><a href="index.html"><ion-icon name="analytics-sharp"></ion-icon> Ranking </a></li>
+            <li><a href="recentlyadded.html"><ion-icon name="add-circle-sharp"></ion-icon> Recently Added</a></li>
+            <li><a href="highlights.html"><ion-icon name="list-sharp"></ion-icon> Highlights</a></li>
+        </ul>
+    
+        <div class="sub-page-content">
+            <h2>Cryptocurrency Rankings</h2>
+            <p>Welcome to the Cryptocurrency Rankings page. Explore the latest rankings and trends in the world of cryptocurrencies.</p>
+        </div>
+    </div>
+    
+    <div id="products-page" class="hidden" onmouseleave="handleMouseLeave('products-page', this, 'default')">
+        <ul class="products-page-list">
+            <li><a href="converter.html"><ion-icon id="conv" name="swap-horizontal-sharp"></ion-icon> Converter</a></li>
+        </ul>
+    
+        <div class="sub-page-content">
+            <h2>Product Converter</h2>
+            <p>Discover our product converter tool, allowing you to easily convert between different product units. Try it now!</p>
+        </div>
+    </div>
+
+    <nav>
+    <ul class="navlist">
+                 <li><a class="nav2" href="index.html" onmouseenter="handleMouseEnter('Cryptocurrencies-page', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">Cryptocurrencies</a></li>
+        <li><a class="nav2" href="about.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">About</a></li>
+        <li><a class="nav2" href="#products" onmouseenter="handleMouseEnter('products-page', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">Products</a></li>
+        <li><a class="nav2" href="history.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">History</a></li>
+        <li><a class="nav2" href="news.html" onmouseenter="handleMouseEnter('none', this, 'gold')" onmouseleave="handleMouseLeave('none', this, 'default')">News</a></li>
+        <li><form name="search" method="get" class="search-bar" action="https://www.google.com/search">
+            <input type="text" placeholder="Search anything" name="search">
+            <button type="submit"><ion-icon name="search-sharp"></ion-icon></button>
+        </form></li>
+    </ul>
+    </nav>
+    
+    <div class="BIGcontainer">
+        
+        <div class="smallcont">
+            <h2>Trending Crypto</h2>
+            <p class="leftcoin">coin</p>
+            <p class="rightprice">price</p> 
+            <a class="none" href="highlights.html">More...</a>
+            <ul class="namesofcoins" class="smallcontul">
+                <li>1.FEG BSC</li>
+                <li>2.Tectum</li>
+                <li>3.Sei</li>
+            </ul>
+            <ul class="pricesofcoins" class="smallcontul">
+                <li>$0.00035819</li>
+                <li>$21.63</li>
+                <li>$0.551357</li>
+            </ul>
+        </div>
+
+        <div class="smallcont">
+            <h2>Most Voted Coin</h2>
+            <p class="leftcoin">coin</p> 
+            <p class="rightprice">price</p>
+            <a class="none" href="highlights.html">More...</a>
+            <ul class="namesofcoins" class="smallcontul">
+                <li>1.Degocoin</li>
+                <li>2.ORDI</li>
+                <li>3.Bitcoin SV</li>
+            </ul>
+            <ul class="pricesofcoins" class="smallcontul">
+                <li>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0.092869</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$77.18</li>
+                <li>&nbsp;&nbsp;$102.87</li>
+            </ul>
+        </div>
+
+        <div class="smallcont">
+            <h2>New Cryptocurrencies</h2>
+            <p class="leftcoin">coin</p> 
+            <p class="rightprice">price</p>
+            <a class="none" href="recentlyadded.html">More...</a>
+            <ul class="namesofcoins" class="smallcontul">
+                <li>1.TRUMP</li>
+                <li>2.NEAT</li>
+                <li>3.CATWIFHAT</li>
+            </ul>
+            <ul class="pricesofcoins" class="smallcontul">
+                <li>$0.000002534</li>
+                <li>$0.3436</li>
+                <li>$0.001049</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- Function for dark mode theme to light mode and vice versa -->
+    
+    <ion-icon name="moon-sharp" id="moon"></ion-icon>
+    
+
+    <script>
+        // darkModeToggle.js
+const toggle = document.getElementById("moon");
+const body = document.querySelector('body');
+
+function toggleDarkMode() {
+    body.classList.toggle("dark-mode");
+
+    // Get the current icon name
+    const currentIcon = toggle.getAttribute('name');
+
+    // Toggle between moon and sun icons
+    const newIcon = currentIcon === 'moon-sharp' ? 'sunny-sharp' : 'moon-sharp';
+
+    // Set the new icon
+    toggle.setAttribute('name', newIcon);
+
+    // Store dark mode state in local storage
+    const isDarkModeEnabled = body.classList.contains('dark-mode');
+    localStorage.setItem('darkModeEnabled', isDarkModeEnabled);
+}
+
+// Check local storage on page load and apply dark mode if enabled
+document.addEventListener('DOMContentLoaded', () => {
+    const isDarkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+    if (isDarkModeEnabled) {
+        body.classList.add('dark-mode');
+        toggle.setAttribute('name', 'sunny-sharp');
+    }
+});
+
+// Event listener for the toggle button
+toggle.addEventListener('click', toggleDarkMode);
+
+        
+        // Change the color of the navigation bar
+        function changeColor(element, color) {
+            element.style.color = color;
+
+            if (color === 'default') {
+                element.style.color = '';
+            }
+        }
+
+        function showPage(pageId) {
+            const page = document.getElementById(pageId);
+            if (page) {
+                page.style.display = 'block';
+            }
+        }
+
+        function hidePage(pageId) {
+            const page = document.getElementById(pageId);
+            if (page) {
+                page.style.display = 'none';
+            }
+        }
+
+        function handleMouseEnter(pageId, element, color) {
+            changeColor(element, color);
+            showPage(pageId);
+        }
+
+        function handleMouseLeave(pageId, element, color) {
+            changeColor(element, color);
+            hidePage(pageId);
+        }
+        var loader=document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display="none";
+        })
+    </script>
+
+    <body>
+        <main>
+        <table class="crypto-table">
+            <tr class="table-row"> 
+                <th class="d0">#</th>
+                <th id="name" class="d1">Name</th>
+                <th class="d2">Price</th>
+                <th class="d3">1h %</th>
+                <th class="d4">24h %</th>
+                <th class="d6">Market Cap</th>
+                <th class="d7">Volume (24h)</th>
+                <th class="d8">Circulating Supply</th>
+                <th class="d9">Last 7 Days</th>
+            </tr>
+    
+            
+            <tr class="table-row">
+                <td class="d0">1</td>
+                <td class="d1"><img  id="BTCTIMAGE" src="images/BTCimage.png" alt="bitcoin-logo"> Bitcoin <p id="TBTC">BTC</p></td>
+                <td class="d2"><a id="bitcoinPrice" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin/" >$42,756.58</a></td>
+                <td class="d3"><a style="color:rgb(75, 228, 75);" href="https://coinmarketcap.com/currencies/bitcoin/"  class="crypto"><ion-icon  class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>0.07</a> </td>
+                <td class="d4"><a class="crypto" style="color: red;" href="https://coinmarketcap.com/currencies/bitcoin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>0.95%</a></td>
+                <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/bitcoin/">$841,568,957,257</a></td>
+                <td class="d7"><a id="volume24hrbtc" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin/">$25,815,223,840</a> <p style="font-size: small;">598,632 BTC</p></td>
+                <td class="d8"> <a id="supplybtc" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin/">18,772,918 BTC</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/bitcoin/"> <img src="images/BTCgr.svg" alt="graphbtc"></a> </td>
+            </tr>
+    
+            
+            <tr class="table-row">
+                <td class="d0">2</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/ETHimage.png" alt="ethereum-logo"> Ethereum <p id="TBTC">ETH</p></td>
+                <td class="d2"><a id="ethereumPrice" class="crypto" href="https://coinmarketcap.com/currencies/ethereum/">$3,123.45</a></td>
+                <td class="d3" ><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/ethereum/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 1.25%</a> </td>
+                <td class="d4" ><a id="ethereum24h" style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/ethereum/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 4.56%</a></td>
+                <td class="d6"><a id="marketcapeth" class="crypto" href="https://coinmarketcap.com/currencies/ethereum/">$400,987,654,321</a></td>
+                <td class="d7"><a id="volume24heth" class="crypto" href="https://coinmarketcap.com/currencies/ethereum/">$28,901,234,567</a><p style="font-size: small;">7,561,255 ETH</p></td>
+                <td class="d8"><a id="supplyeth" class="crypto" href="https://coinmarketcap.com/currencies/ethereum/">116,789,123 ETH</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/ethereum/"> <img src="images/ETHgr.svg" alt="grapheth"></a></td>
+            </tr>
+    
+            
+            <tr class="table-row">
+                <td class="d0">3</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/BNBimage.png" alt="binance-coin-logo"> Binance Coin <p id="TBTC">BNB</p></td>
+                <td class="d2"><a id="bnbPrice" class="crypto" href="https://coinmarketcap.com/currencies/binance-coin/">$303.76</a></td>
+                <td class="d3"><a id="bnb1h"  style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/binance-coin/"> <ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon>2.43%</a> </td>
+                <td class="d4"><a id="bnb24h"  style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/binance-coin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 7.72%</a></td>
+                <td class="d6"><a id="marketcapbnb" class="crypto" href="https://coinmarketcap.com/currencies/binance-coin/">$49,567,890,123</a></td>
+                <td class="d7"><a id="volume24hbnb" class="crypto" href="https://coinmarketcap.com/currencies/binance-coin/">$5,432,109,876</a><p style="font-size: small;">6,376,883 BNB</p></td>
+                <td class="d8"><a id="supplybnb" class="crypto" href="https://coinmarketcap.com/currencies/binance-coin/">163,456,789 BNB</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/binance-coin/"> <img src="images/BNBgr.svg" alt="graphbnb"></a></td>
+            </tr>
+    
+           
+            <tr class="table-row">
+                <td class="d0">4</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/tether-usdt.png" alt="tether-logo"> Tether USDt <p id="TBTC">USDT</p></td>
+                <td class="d2"><a id="tetherprice" class="crypto" href="https://coinmarketcap.com/currencies/tether/">$1.00</a></td>
+                <td class="d3"><a  style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/tether/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 0.05%</a></td>
+                <td class="d4"><a  style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/tether/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 0.02%</a></td>
+                <td class="d6"><a id="marketcapth" class="crypto" href="https://coinmarketcap.com/currencies/tether/">$61,234,567,890</a></td>
+                <td class="d7"><a id="volume24hth" class="crypto" href="https://coinmarketcap.com/currencies/tether/">$31,456,789,012</a><p style="font-size: small;"> 61,069,856,827 USDT</p></td>
+                <td class="d8"><a id="supplyth" class="crypto" href="https://coinmarketcap.com/currencies/tether/">61,123,456,789 USDT</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/tether/"> <img src="images/USDTgr.svg" alt="graphtether"></a></td>
+            </tr>
+    
+            
+            <tr class="table-row">
+                <td class="d0">5</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/2010.png" alt="cardano-logo"> Cardano <p id="TBTC">ADA</p></td>
+                <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/cardano/">$2.14</a></td>
+                <td class="d3" ><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/cardano/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -0.91%</a> </td>
+                <td class="d4" ><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/cardano/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>-2.34%</a></td>
+                <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/cardano/">$68,901,234,567</a></td>
+                <td class="d7"><a  class="crypto" href="https://coinmarketcap.com/currencies/cardano/">$8,765,432,109</a><p style="font-size: small;">1,986,174,912 ADA</p></td>
+                <td class="d8"><a  class="crypto" href="https://coinmarketcap.com/currencies/cardano/">32,456,789,012 ADA</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/cardano/"> <img src="images/52.svg" alt="graphada"></a></td>
+            </tr>
+    
+            
+            <tr class="table-row">
+                <td class="d0">6</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/XRP.png" alt="ripple-logo"> Ripple <p id="TBTC">XRP</p></td>
+                <td class="d2"><a  class="crypto" href="https://coinmarketcap.com/currencies/ripple/">$1.05</a></td>
+                <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/ripple/"> <ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon>-0.45%</a> </td>
+                <td class="d4"><a  style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/ripple/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -1.78%</a></td>
+                <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/ripple/">$48,901,234,567</a></td>
+                <td class="d7"><a class="crypto" href="https://coinmarketcap.com/currencies/ripple/">$9,765,432,109<p style="font-size: small;">2,878,566,433 XRP</p></a></td>
+                <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/ripple/">46,789,012,345 XRP</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/ripple/"> <img src="images/52 (1).svg" alt="graphxrp"></a></td>
+            </tr>
+
+            <tr class="table-row">
+                <td class="d0">7</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/polkadot-dot.png" alt="polkadot-logo"> Polkadot <p id="TBTC">DOT</p></td>
+                <td class="d2"><a  class="crypto" href="https://coinmarketcap.com/currencies/polkadot/">$27.89</a></td>
+                <td class="d3"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/polkadot/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 1.15%</a></td>
+                <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/polkadot/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 4.32%</a></td>
+                <td class="d6"><a id="marketcapdot" class="crypto" href="https://coinmarketcap.com/currencies/polkadot/">$25,678,901,234</a></td>
+                <td class="d7"><a id="volume24hdot" class="crypto" href="https://coinmarketcap.com/currencies/polkadot/">$8,765,432,109 <p style="font-size: small;">55,041,090 DOT</p></a></td>
+                <td class="d8"><a id="supplydot" class="crypto" href="https://coinmarketcap.com/currencies/polkadot/">934,567,890 DOT   </a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/polkadot/"> <img src="images/6636.svg" alt="graphdot"></a></td>
+            </tr>
+            
+           
+            <tr class="table-row">
+                <td class="d0">8</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/litecoin-ltc.png" alt="litecoin-logo"> Litecoin <p id="TBTC">LTC</p></td>
+                <td class="d2"><a  class="crypto" href="https://coinmarketcap.com/currencies/litecoin/">$155.72</a></td>
+                <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/litecoin/"><ion-icon style="color: red;" class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -0.82%</a></td>
+                <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/litecoin/"><ion-icon style="color: red;" class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -1.97%</a></td>
+                <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/litecoin/">$10,987,654,321</a></td>
+                <td class="d7"><a class="crypto" href="https://coinmarketcap.com/currencies/litecoin/">$5,432,109,876<p style="font-size: small;">598,632 LTC</p></a></td>
+                <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/litecoin/">72,345,678 LTC</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/litecoin/"> <img src="images/2.svg" alt="graphltc"></a></td>
+            </tr>
+            
+            
+            
+            <tr class="table-row">
+                <td class="d0">9</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/1831.png" alt="bitcoin-cash-logo"> Bitcoin Cash <p id="TBTC">BCH</p></td>
+                <td class="d2"><a id="bchprice" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin-cash/">$526.80</a></td>
+                <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin-cash/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -1.15%</a></td>
+                <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin-cash/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -3.28%</a></td>
+                <td class="d6"><a id="marketcapbch" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin-cash/">$9,012,345,678</a></td>
+                <td class="d7"><a id="volume24hbch" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin-cash/">$4,321,098,765</a><p style="font-size: small;">2,722,460 BCH</p></td>
+                <td class="d8"><a id="supplybch" class="crypto" href="https://coinmarketcap.com/currencies/bitcoin-cash/">17,890,123 BCH</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/bitcoin-cash/"> <img src="images/1831.svg" alt="graphbch"></a></td>
+            </tr>
+            
+            
+            <tr class="table-row">
+                <td class="d0">10</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/chainlink-link.png" alt="chainlink-logo"> Chainlink <p id="TBTC">LINK</p></td>
+                <td class="d2"><a id="linkprice" class="crypto" href="https://coinmarketcap.com/currencies/chainlink/">$29.17</a></td>
+                <td class="d3" ><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/chainlink/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 0.89%</a></td>
+                <td class="d4" ><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/chainlink/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -1.12%</a></td>
+                <td class="d6"><a id="marketcaplink" class="crypto" href="https://coinmarketcap.com/currencies/chainlink/">$11,234,567,890</a></td>
+                <td class="d7"><a id="volume24hlink" class="crypto" href="https://coinmarketcap.com/currencies/chainlink/">$2,109,876,543</a><p style="font-size: small;">74,254,790 LINK</p></td>
+                <td class="d8"><a id="supplylink" class="crypto" href="https://coinmarketcap.com/currencies/chainlink/">387,654,321 LINK</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/chainlink/"> <img src="images/1975.svg" alt="graphlink"></a></td>
+            </tr>
+            
+            <tr class="table-row">
+                <td class="d0">11</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/512.png" alt="stellar-logo"> Stellar <p id="TBTC">XLM</p></td>
+                <td class="d2"><a class="crypto" href="https://coinmarketcap.com/currencies/stellar/">$0.33</a></td>
+                <td class="d3"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/stellar/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 1.20%</a></td>
+                <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/stellar/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 3.45%</a></td>
+                <td class="d6"><a class="crypto" href="https://coinmarketcap.com/currencies/stellar/">$7,890,123,456</a></td>
+                <td class="d7"><a class="crypto" href="https://coinmarketcap.com/currencies/stellar/">$1,234,567,890</a><p style="font-size: small;">964,641,519 XLM</p></td>
+                <td class="d8"><a class="crypto" href="https://coinmarketcap.com/currencies/stellar/">23,456,789,012 XLM</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/stellar/"> <img src="images/512.svg" alt="graphxlm"></a></td>
+            </tr>
+            
+           
+            <tr class="table-row">
+                <td class="d0">12</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/polygon-matic.png" alt="bitcoin-sv-logo"> Polygon <p id="TBTC">MATIC</p></td>
+                <td class="d2"><a id="bsvprice" class="crypto" href="https://coinmarketcap.com/currencies/polygon/">$1.05</a></td>
+                <td class="d3" ><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/polygon/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 0.47%</a></td>
+                <td class="d4" ><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/polygon/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> 2.58%</a></td>
+                <td class="d6"><a id="marketcapbsv" class="crypto" href="https://coinmarketcap.com/currencies/polygon/">$10,002,693,231</a></td>
+                <td class="d7"><a id="volume24hbsv" class="crypto" href="https://coinmarketcap.com/currencies/polygon/">$1,403,950,324</a> <p style="font-size: small;">1,341,786,006 MATIC</p> </td>
+                <td class="d8"><a id="supplybsv" class="crypto" href="https://coinmarketcap.com/currencies/polygon/">9,555,261,222 MATIC</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/polygon/"> <img src="images/3890.svg" alt="graphbsv"></a></td>
+            </tr>
+            
+          
+            <tr class="table-row">
+                <td class="d0">13</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/USDC.png" alt="usd-coin-logo"> USD Coin <p id="TBTC">USDC</p></td>
+                <td class="d2"><a id="usdcprice" class="crypto" href="https://coinmarketcap.com/currencies/usd-coin/">$1.00</a></td>
+                <td class="d3"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/usd-coin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 0.03%</a></td>
+                <td class="d4" ><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/usd-coin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -0.12%</a></td>
+                <td class="d6"><a id="marketcapusdc" class="crypto" href="https://coinmarketcap.com/currencies/usd-coin/">$8,765,432,109</a></td>
+                <td class="d7"><a id="volume24husdc" class="crypto" href="https://coinmarketcap.com/currencies/usd-coin/">$2,345,678,901</a><p style="font-size: small;">7,658,452,728 USDC</p></td>
+                <td class="d8"><a id="supplyusdc" class="crypto" href="https://coinmarketcap.com/currencies/usd-coin/">8,901,234,567 USDC</a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/usd-coin/"> <img src="images/3408.svg" alt="graphusdc"></a></td>
+            </tr>
+            
+           
+            <tr class="table-row">
+                <td class="d0">14</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/tron-trx.png" alt="polkadot-logo"> TRON <p id="TBTC">TRX</p></td>
+                <td class="d2"><a id="dotprice" class="crypto" href="https://coinmarketcap.com/currencies/tron/">$0.1057</a></td>
+                <td class="d3" ></ion-icon><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/tron/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> 0.03%</a></td>
+                <td class="d4" ><a style="color: rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/tron/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 1.72%</a></td>
+                <td class="d6"><a id="marketcapdot" class="crypto" href="https://coinmarketcap.com/currencies/tron/">9,738,593,532</a></td>
+                <td class="d7"><a id="volume24hdot" class="crypto" href="https://coinmarketcap.com/currencies/tron/">$1,261,491,143 <p style="font-size: small;">73,616,039 LINK </p></a></td>
+                <td class="d8"><a id="supplydot" class="crypto" href="https://coinmarketcap.com/currencies/tron/">568,099,970 LINK </a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/tron/"> <img src="images/1958.svg" alt="graphdot"></a></td>
+            </tr>
+
+            <tr class="table-row">
+                <td class="d0">15</td>
+                <td class="d1"><img id="BTCTIMAGE" src="images/internet-computer-icp.png" alt="polkadot-logo"> Internet Computer<p id="TBTC">ICP</p></td>
+                <td class="d2"><a id="dotprice" class="crypto" href="https://coinmarketcap.com/currencies/internet-computer/">$9.78</a></td>
+                <td class="d3" ></ion-icon><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/internet-computer/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 1.67%</a></td>
+                <td class="d4" ><a style="color: rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/internet-computer/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 7.21%</a></td>
+                <td class="d6"><a id="marketcapdot" class="crypto" href="https://coinmarketcap.com/currencies/internet-computer/">$4,436,830,925</a></td>
+                <td class="d7"><a id="volume24hdot" class="crypto" href="https://coinmarketcap.com/currencies/internet-computer/">$154,150,275<p style="font-size: small;">15,776,614 ICP </p></a></td>
+                <td class="d8"><a id="supplydot" class="crypto" href="https://coinmarketcap.com/currencies/internet-computer/">453,897,825 ICP </a></td>
+                <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/internet-computer/"> <img src="images/8916.svg" alt="graphdot"></a></td>
+            </tr>
+        
+<tr class="table-row">
+    <td class="d0">16</td>
+                    <td class="d1"><img id="BTCTIMAGE" src="images/solana-sol.png" alt="solana-logo"> Solana <p id="TBTC">SOL</p></td>
+    <td class="d2"><a id="solprice" class="crypto" href="https://coinmarketcap.com/currencies/solana/">$150.20</a></td>
+    <td class="d3"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/solana/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 2.85%</a></td>
+    <td class="d4"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/solana/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -0.50%</a></td>
+    <td class="d6"><a id="marketcapsol" class="crypto" href="https://coinmarketcap.com/currencies/solana/">$15,678,901,234</a></td>
+    <td class="d7"><a id="volume24hsol" class="crypto" href="https://coinmarketcap.com/currencies/solana/">$3,456,789,012</a><p style="font-size: small;">89,742,601 SOL</p></td>
+    <td class="d8"><a id="supplysol" class="crypto" href="https://coinmarketcap.com/currencies/solana/">200,000,000 SOL</a></td>
+    <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/solana/"> <img src="images/5426.svg" alt="graphsol"></a></td>
+</tr>
+
+
+<tr class="table-row">
+    <td class="d0">17</td>
+    <td class="d1"><img id="BTCTIMAGE" src="images/74.png" alt="dogecoin-logo"> Dogecoin <p id="TBTC">DOGE</p></td>
+    <td class="d2"><a id="dogeprice" class="crypto" href="https://coinmarketcap.com/currencies/dogecoin/">$0.30</a></td>
+    <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/dogecoin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -1.20%</a></td>
+    <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/dogecoin/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 0.80%</a></td>
+    <td class="d6"><a id="marketcapdoge" class="crypto" href="https://coinmarketcap.com/currencies/dogecoin/">$40,123,456,789</a></td>
+    <td class="d7"><a id="volume24hdoge" class="crypto" href="https://coinmarketcap.com/currencies/dogecoin/">$7,890,123,456</a><p style="font-size: small;">26,301,782,581 DOGE</p></td>
+    <td class="d8"><a id="supplydoge" class="crypto" href="https://coinmarketcap.com/currencies/dogecoin/">133,744,372,781 DOGE</a></td>
+    <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/dogecoin/"> <img src="images/74.svg" alt="graphdoge"></a></td>
+</tr>
+
+
+<tr class="table-row">
+    <td class="d0">18</td>
+                    <td class="d1"><img id="BTCTIMAGE" src="images/vechain-vet.png" alt="vechain-logo"> VeChain <p id="TBTC">VET</p></td>
+    <td class="d2"><a id="vetprice" class="crypto" href="https://coinmarketcap.com/currencies/vechain/">$0.15</a></td>
+    <td class="d3"><a style="color: red;" class="crypto" href="https://coinmarketcap.com/currencies/vechain/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-down-outline"></ion-icon> -0.75%</a></td>
+    <td class="d4"><a style="color:rgb(75, 228, 75);" class="crypto" href="https://coinmarketcap.com/currencies/vechain/"><ion-icon class="Ticons" style="position: relative; top: 3px;" name="caret-up-outline"></ion-icon> 1.20%</a></td>
+    <td class="d6"><a id="marketcapvet" class="crypto" href="https://coinmarketcap.com/currencies/vechain/">$9,876,543,210</a></td>
+    <td class="d7"><a id="volume24hvet" class="crypto" href="https://coinmarketcap.com/currencies/vechain/">$2,345,678,901</a><p style="font-size: small;">63,456,876,603 VET</p></td>
+    <td class="d8"><a id="supplyvet" class="crypto" href="https://coinmarketcap.com/currencies/vechain/">64,315,576,989 VET</a></td>
+    <td class="d9"><a class="crypto" href="https://coinmarketcap.com/currencies/vechain/"> <img src="images/3077.svg" alt="graphvet"></a></td>
+</tr>
+
+            
+        </table>
+    </main>
+    <br>
+    <footer>
+        <div style="position: relative;" class="footer">
+            <div class="footer-content">
+                <p class="rights">&copy; 2023 CurrencEase. All Rights Reserved.</p>
+                <div class="social">
+                    <ul>
+                        <li><a class="youtube" href="https://www.youtube.com/watch?v=eIqre0Wsbro&list=PLRCvSNiMyEmyBsu6nGxB5LtMdAltgNDX5&index=2"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li><a class="whatsapp" href="https://ionic.io/ionicons"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                        <li><a class="twitter" href="https://twitter.com"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a class="facebook" href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a class="tiktok" href="https://www.tiktok.com"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+              
+</body>
+</html>
+

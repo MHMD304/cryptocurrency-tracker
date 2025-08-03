@@ -1,0 +1,989 @@
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0s, color 0s;
+}
+
+body.dark-mode .navlist a ,body.dark-mode .Cryptocurrencies-page-list a,body.dark-mode .products-page-list a,body.dark-mode .footer-content p{
+    color: white;
+}
+body.dark-mode .main1 p {
+    color: white;
+}
+body.dark-mode .footer,body.dark-mode .navlist{
+    background-color: #333;
+}
+body.dark-mode .tiktok ion-icon{
+    color:white;
+}
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: 100%;
+    color: #fff;
+}
+
+.navlist {
+    display: flex;
+    flex-direction:flex-start; 
+    flex-direction: row;
+    width: 100%;
+    top: 0;
+    height: 70px; 
+    text-align: center;
+    border: 1px solid black;
+    border-right: none;
+    border-left: none;
+    background-color: #fff;
+}
+
+.navlist li {
+    list-style-type: none;
+}
+
+.navlist a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 15px 25px; 
+    display: block;
+}
+.footer {
+    background-color:#fff;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center; 
+    color: #333; 
+    border-top:1px solid black;
+    z-index: 90;
+    
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.rights {
+    margin: 0;
+    font-size: 14px;
+    text-align: left; 
+}
+
+.social {
+    list-style-type: none;
+    padding: 0;
+    margin-left:300px; 
+}
+
+.social ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.youtube ion-icon {
+    font-size: 2em;
+    color: red;
+}
+
+.whatsapp ion-icon {
+    font-size: 2em;
+    color: #25D366;
+}
+
+.twitter ion-icon {
+    font-size: 2em;
+    color: #1DA1F2;
+}
+
+.facebook ion-icon {
+    font-size: 2em;
+    color: #3b5998;
+}
+
+.instagram ion-icon {
+    font-size: 2em;
+    color: #F56040;
+}
+
+.tiktok ion-icon {
+    font-size: 2em;
+    color:black;
+}
+
+
+#moon {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 22px;
+    right: 1px;
+}
+.navi{
+    position: relative;
+    text-align: center;
+}
+.name{
+    position: relative;
+    top: -20px;
+    font-size: xx-large;
+    font-family: fantasy;
+}
+.name1{
+    position: relative;
+    top: 28px;
+    width: 50px;
+    height: 50px;
+    left: -91px;
+}
+.hidden{
+    display: none;
+}
+
+#Cryptocurrencies-page {
+    position: absolute;
+    text-align: center;
+    width: 220px;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+    top: 75px;
+    left: 18px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.Cryptocurrencies-page-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Cryptocurrencies-page-list li {
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Cryptocurrencies-page-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.sub-page-content {
+    padding: 20px;
+    text-align: left;
+    background-color: #e0e0e0;
+}
+
+#products-page {
+    position: absolute;
+    text-align: center;
+    width: 220px;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+    top: 75px;
+    left: 253px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.products-page-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.products-page-list li {
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.products-page-list li:hover {
+    background-color: #e0e0e0;
+}
+.products-page-list a {
+    text-decoration-line: none;
+    color: black;
+}
+.Cryptocurrencies-page-list a{
+    text-decoration-line:none;
+    color: black;
+}
+
+body.dark-mode #Cryptocurrencies-page,
+body.dark-mode #products-page {
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark-mode .Cryptocurrencies-page-list a,
+body.dark-mode .products-page-list a {
+    color: #fff;
+}
+
+body.dark-mode .Cryptocurrencies-page-list li,
+body.dark-mode .products-page-list li {
+    border-bottom: 1px solid #555;
+}
+
+body.dark-mode .Cryptocurrencies-page-list li:hover,
+body.dark-mode .products-page-list li:hover {
+    background-color: #444;
+}
+
+body.dark-mode .sub-page-content {
+    color: #fff;
+    z-index: 100; 
+    visibility: visible;
+}
+
+
+
+
+#preloader {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background-color:white;
+    background-image: url("social-media.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15%;
+}
+.search-bar{
+    width: 45%;
+    height: 20%;
+    background:#ddd;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    margin-top: 14px;
+    margin-left: 350px;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 0px;
+    font-size: 16px;
+}
+
+::placeholder{
+    color: black;
+}
+
+.search-bar button img{
+    margin: auto;
+    width: 30px;
+    color: white;
+    background-color: black;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer ;
+}
+
+.news-page{
+    width:75vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+}
+.news-page p{
+color:#b6b2b2;
+}
+
+
+#calender{
+    color: black;
+    font-size: 17px;
+}
+body.dark-mode #calender{
+    color: white;
+}
+#OIP,#OIP1,#OIP3,#OIP4,#OIP5,#OIP6,#OIP7,#OIP8,#OIP9{
+    width:290px;
+    height: 181px;
+    border-radius: 20px;
+    position: absolute;
+    top:170px;
+}
+#OIP1{
+    position:absolute;
+    top:  400px ;
+}
+#OIP3{
+    position: absolute;
+    top: 620px;
+}
+#OIP4{
+    position: absolute;
+    top:840px;
+}
+#OIP5{
+    position: absolute;
+    top: 1060px;
+}
+#OIP6{
+    position: absolute;
+    top:1280px;
+}
+#OIP7{
+    position: absolute;
+    top:1500px;
+}
+#OIP8{
+    position: absolute;
+    top:1720px;
+}
+#OIP9{
+    position: absolute;
+    top:1940px;
+}
+#div1,#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 180px;
+    left:300px;
+}
+#div2{
+    position: absolute;
+    top: 400px;
+}
+#div3{
+    position: absolute;
+    top:620px;
+}
+#div4{
+    position: absolute;
+    top: 840px;
+}
+#div5{
+    position: absolute;
+    top: 1060px;
+}
+#div6{
+    position: absolute;
+    top:1280px;
+}
+#div7{
+    position: absolute;
+    top:1500px;
+}
+#div8{
+    position: absolute;
+    top:1720px;
+}
+#div9{
+    position: absolute;
+    top:1940px;
+}
+
+h1,p,h3,h2{
+    color:black;
+}
+body.dark-mode .content h1{
+color:white;
+}
+body.dark-mode .news-page h3,body.dark-mode .content h2 {
+    color: white;
+}
+
+.ticker-wrapper{
+    font-family: 'Roboto',sans-serif;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 0px;
+
+}
+ticker-wrapper {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 0px;
+}
+
+.bigheading {
+    display: block;
+    position: absolute;
+    font-style: italic;
+    font-size: 30px;
+    background-color: #e31b1b;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.bigheading::before,
+.bigheading::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-style: solid;
+    z-index: -1;
+}
+
+.bigheading::before {
+    border-width: 0 39px 39px 39px;
+    border-color: transparent transparent #1f32d8 transparent;
+    right: -39px;
+    top:0px;
+}
+
+.bigheading::after {
+    border-width: 39px 39px 0 39px;
+    border-color: #1f32d8 transparent transparent transparent;
+    left: -39px;
+    bottom: 0;
+}
+
+.text-update {
+    height: 38px;
+    background: #f6f6f7;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    left: 125px;
+}
+
+.text-update p {
+    position: absolute;
+    width: 150%;
+    margin: 0;
+    font-weight: 700;
+    text-align: left;
+    transform: translateX(100%);
+    animation: moving 25s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.history1{
+    background-image: url(historybg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    font-size: 1.15em;
+    font-family: "Arial";
+}
+
+.history{
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+    font-size: xx-large;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Tahoma;
+}
+
+.Satoshi{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 48px;
+    margin-right: auto;
+    width: 1400px;
+    height: 650px;
+}
+
+.Hal{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+.coin{
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    width: 400px;
+    height: 300px;
+}
+
+.historydiv2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1400px;
+}
+
+.historydiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1400px;
+}
+
+.coin2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 48px;
+    margin-right: auto;
+    width: 1400px;
+    height: 650px;
+}
+
+#Vitalik{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 250px;
+    height: 230px;
+}
+
+#Charles{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    width: 400px;
+    height: 350px;
+}
+
+#Gavin{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 250px;
+    height: 230px;
+}
+
+#Anthony{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    width: 400px;
+    height: 350px;
+}
+
+#Joseph{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    width: 400px;
+    height: 350px;
+}
+
+.history3{
+    height: 100vh;
+    width: 90vw;
+}
+
+#historyhead{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    margin: 0;
+    padding:0;
+    color:#000;
+    font-family:tahoma;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:6em;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-width:4px;
+}
+
+#description{
+    float: right;
+    margin-top: 312px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:bold;
+
+}
+#description2{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 13%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    letter-spacing: 2px;
+    font-size: medium;
+
+}
+
+#willet{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 250px;
+    height: 230px;
+}
+#philiptether{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 250px;
+    height: 230px;
+}
+#tethervsbtc{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 250px;
+    height: 230px;
+}
+#PaoloArdoino{
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 250px;
+    height: 230px;   
+}
+
+body.dark-mode #moon{
+    visibility: visible;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 22px;
+    right: 1px;
+}
+
+#scrollToTopBtn {
+    cursor: pointer;
+    color: black;
+    top:80vh;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+  
+}
+
+body.dark-mode #scrollToTopBtn{
+    color: white;
+}
+#scroll{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    float: right;
+    background-color: red;
+}
+.crypto-table{
+
+    height: 50px;
+    color: black;
+    margin-top: 2%;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+
+.d1,.d2,.d3,.d4,.d6,.d7,.d8,.d9,.d0{
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top:1px solid #ddd;
+    
+
+}
+
+.table-row{
+    height: 80px;
+}
+.d1{
+    width:15%;
+    text-align:left;
+}
+.d9{
+  width:10% ;
+}
+#TBTC{
+    display: inline;
+    color: #767272;
+}
+#BTCTIMAGE{
+    width: 24px;
+    height: auto;
+    position: relative;
+    top: 6px;
+}
+.Ticons{
+    display: inline-block;
+    width: 0.93em;
+    height: 1em;
+    contain: strict;
+    fill: currentcolor;
+    box-sizing: content-box;
+}
+
+.crypto{
+    text-decoration: none;
+}
+.crypto-table  a:hover{
+    color:blue;
+}
+#name{
+    padding-left: 55px;
+
+}
+
+
+.crypto-table th,td{
+    color: black;;
+}
+
+body.dark-mode .crypto-table th{
+    color: white;
+}
+body.dark-mode .crypto-table td{
+    color:white;
+}
+body.dark-mode a{
+    color:white;
+}
+body.dark-mode .crypto-table p{
+    color: white;
+}
+
+
+
+.crypto:link{
+    color: black;
+}
+
+body.dark-mode .crypto:link{
+    color: white;
+}
+.BIGcontainer{
+    margin-top: 2%;
+    width: 90vw;
+    height: 30vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    left: 77px;
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) ;*/
+    
+}
+
+.smallcont{
+    position: relative;
+    margin: auto;
+    width: 428px;
+    height: 179px;
+    background-color:white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,2);
+}
+body.dark-mode .BIGcontainer .smallcont{
+    background-color: #333;
+    box-shadow: 0px 0px 10px rgba(360,360,360,2);
+}
+body.dark-mode .BIGcontainer .smallcont ul{
+    color: #dfdbdb;
+}
+body.dark-mode .BIGcontainer .smallcont h2{
+    color: #fff;
+}
+body.dark-mode .BIGcontainer .smallcont p{
+    color: #fff;
+}
+.smallcont ul{
+    list-style-type:none;
+    color: black;
+
+}
+.smallcont ul li{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.leftcoin{
+    display: inline-block;
+    font-family: 'roboto',sans-serif;
+    font-style:normal;
+    left: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: medium;
+    position: absolute;
+    padding-left: 6px;
+    text-decoration:solid;
+}
+.rightprice{
+    display: inline-block;
+    position: absolute;
+    font-family: 'roboto',sans-serif;
+    font-style:normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: medium;
+    padding-right: 6px;
+    text-decoration: solid;
+    left: 345px;
+}
+.namesofcoins{
+    position: absolute;
+    left: 9px;
+    top: 48px;
+   
+}
+.pricesofcoins{
+    position: absolute;
+    left:305px;
+    top: 48px;
+}
+.none{
+    position: absolute;
+    top: 158px;
+    right: 18px;
+    color: rgb(24, 24, 214);
+    font-size: larger;
+    text-decoration: none;
+}
+body.dark-mode .BIGcontainer .smallcont .none{
+    color: rgb(24, 24, 214);
+}
+
+.aboutpage{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right:30px ;
+}
+#bodyaboutpage{
+    background-color:#ddd;
+}
+
+.HEADINGABOUT{
+    text-align: center;
+    font-size: 3em;
+}
+.PARAGRAPHABOUT{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    text-align:start;
+    font-size: xx-large;
+}
+#aboutcont{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: red;
+    
+}
+.companyimage{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 1000px;
+    width: 1500px;
+}
+.leftbox{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.leftbox #h21{
+    text-align:start;
+    font-size: 2em;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.leftbox #h22{
+    text-align: center;
+    font-size: 2em;
+    padding-top: 90px;
+}
+.leftbox #h23{
+    text-align: end;
+    font-size: 2em;
+    padding-top: 80px;
+    padding-right: 20px;
+    color: red;
+}
+#insidebox{
+    position: absolute;
+    left: 396px;
+    top: 454px;
+}
+
+
+
