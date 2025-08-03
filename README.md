@@ -72,7 +72,7 @@ crypto-currency/
 ## 📸 Screenshots
 
 ### 🏠 Main Dashboard
-![Main Dashboard](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/main-page.png)
+![Main Dashboard](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/main-dashboard.png)
 
 ### 💱 Currency Converter
 ![Currency Converter](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/currency-converter.png)
