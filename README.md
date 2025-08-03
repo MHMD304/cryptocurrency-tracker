@@ -71,21 +71,17 @@ crypto-currency/
 
 ## 📸 Screenshots
 
-### Main Dashboard
-![Main Dashboard](screenshots/main-page.png)
-*Cryptocurrency rankings and price tracking interface*
+### 🏠 Main Dashboard
+![Main Dashboard](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/main-page.png)
 
-### Currency Converter
-![Currency Converter](screenshots/converter-page.png)
-*Interactive cryptocurrency conversion tool*
+### 💱 Currency Converter
+![Currency Converter](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/currency-converter.png)
 
-### News Section
-![News Section](screenshots/news-page.png)
-*Latest cryptocurrency news and updates*
+### 📰 News Section
+![News Section](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/news-page.png)
 
-### About Page
-![About Page](screenshots/about-page.png)
-*Information about the platform and cryptocurrency ecosystem*
+### ℹ️ About Page
+![About Page](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/about-page.png)
 
 ---
 
