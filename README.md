@@ -78,10 +78,7 @@ crypto-currency/
 ![Currency Converter](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/currency-converter.png)
 
 ### 📰 News Section
-![News Section](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/news-page.png)
-
-### ℹ️ About Page
-![About Page](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/about-page.png)
+![News Section](https://raw.githubusercontent.com/MHMD304/cryptocurrency-tracker/main/screenshots/news-section.png)
 
 ---
 
