@@ -69,6 +69,26 @@ crypto-currency/
 ✅ **Consistent Navigation**: Seamless linking between all pages  
 ✅ **Professional Documentation**: Comprehensive project overview  
 
+## 📸 Screenshots
+
+### Main Dashboard
+![Main Dashboard](screenshots/main-page.png)
+*Cryptocurrency rankings and price tracking interface*
+
+### Currency Converter
+![Currency Converter](screenshots/converter-page.png)
+*Interactive cryptocurrency conversion tool*
+
+### News Section
+![News Section](screenshots/news-page.png)
+*Latest cryptocurrency news and updates*
+
+### About Page
+![About Page](screenshots/about-page.png)
+*Information about the platform and cryptocurrency ecosystem*
+
+---
+
 ## 🚀 Getting Started
 
 1. **Clone or Download** the project files
